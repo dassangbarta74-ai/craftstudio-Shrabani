@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover beautiful handmade creations, crafted with care and creativity.">
+
+  <meta name="description" content="Discover handmade creations by Clayor. Beautiful products made with care.">
+
   <title>Clayor | Handmade with Love</title>
 
   <style>
@@ -33,8 +36,8 @@
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     header {
@@ -52,7 +55,7 @@
       font-family: Georgia, serif;
       font-size: 30px;
       color: #f0cf8a;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
     }
 
     nav {
@@ -66,7 +69,6 @@
     }
 
     .hero {
-      min-height: 470px;
       padding: 65px 7%;
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -76,8 +78,7 @@
     }
 
     .hero h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(38px, 5vw, 64px);
+      font: bold clamp(38px, 5vw, 64px) Georgia, serif;
       line-height: 1.15;
       margin: 15px 0;
     }
@@ -99,7 +100,7 @@
       width: 100%;
       height: 340px;
       object-fit: cover;
-      border-radius: 160px 160px 12px 12px;
+      border-radius: 150px 150px 12px 12px;
       border: 5px solid white;
     }
 
@@ -126,10 +127,15 @@
       margin-bottom: 35px;
     }
 
-    .section-heading h2 {
+    .section-heading h2,
+    .about h2,
+    .contact h2 {
       font-family: Georgia, serif;
+      margin: 10px 0;
+    }
+
+    .section-heading h2 {
       font-size: clamp(30px, 4vw, 42px);
-      margin: 8px 0;
     }
 
     .section-heading p {
@@ -164,14 +170,13 @@
     }
 
     .product-info h3 {
-      font-family: Georgia, serif;
-      font-size: 22px;
+      font: 22px Georgia, serif;
       margin-bottom: 7px;
     }
 
     .price {
       color: var(--terracotta);
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
       margin: 12px 0;
     }
@@ -193,8 +198,7 @@
     }
 
     .about h2 {
-      font: 40px Georgia, serif;
-      margin: 10px 0 18px;
+      font-size: 40px;
     }
 
     .about p {
@@ -209,7 +213,7 @@
 
     .process-card {
       background: white;
-      padding: 25px;
+      padding: 20px;
       border-radius: 10px;
       text-align: center;
       border: 1px solid #ead8c6;
@@ -231,7 +235,7 @@
     }
 
     .contact h2 {
-      font: 40px Georgia, serif;
+      font-size: 40px;
       margin-bottom: 12px;
     }
 
@@ -251,6 +255,17 @@
       text-align: center;
       padding: 22px;
       font-size: 14px;
+    }
+
+    .missing {
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      text-align: center;
+      color: #705d51;
+      background: #ead9c7;
     }
 
     @media (max-width: 800px) {
@@ -305,7 +320,8 @@
 <body>
 
   <header>
-    <a href="#" class="logo">CLAYOR</a>
+    <a href="#home" class="logo">CLAYOR</a>
+
     <nav>
       <a href="#home">Home</a>
       <a href="#products">Products</a>
@@ -316,63 +332,76 @@
   </header>
 
   <main>
+
     <section class="hero" id="home">
       <div>
         <span class="eyebrow">Handmade • Heartmade</span>
+
         <h1>Beautiful Things, Made by Hand.</h1>
+
         <p>
-          Discover thoughtfully handcrafted creations made with patience,
-          creativity and love. Every piece has its own story.
+          Discover thoughtfully handcrafted creations made with
+          patience, creativity and love. Every piece has its own story.
         </p>
+
         <a href="#products" class="btn">Explore Collection</a>
         <a href="#about" class="btn">Meet the Owner</a>
       </div>
 
-      <!-- Replace hero.jpg with your own product or studio photo -->
-      <img src="hero.jpg"
-           alt="Handmade creations by Clayor"
-           onerror="this.onerror=null;this.src='https://placehold.co/700x900/f2e2d1/633d30?text=Your+Handmade+Photo';">
+      <!-- The hero uses your first product photo -->
+      <img src="product-1.jpg"
+           alt="Handmade collection by Clayor"
+           onerror="this.outerHTML='<div class=&quot;missing&quot;>Product image not found: product-1.jpg</div>';">
     </section>
 
     <section id="products">
       <div class="section-heading">
         <span class="eyebrow">Made with care</span>
         <h2>Our Handmade Collection</h2>
-        <p>Explore unique creations, carefully made by hand. Contact us for availability and custom orders.</p>
+        <p>
+          Explore our handmade creations. Each product is priced at ₹200.
+          Contact us for availability and orders.
+        </p>
       </div>
 
       <div class="products">
 
         <article class="product-card">
-          <img src="product-1.jpg" alt="Handmade product one"
-               onerror="this.onerror=null;this.src='https://placehold.co/600x450/ead9c7/633d30?text=Product+1';">
+          <img src="product-1.jpg"
+               alt="Clayor handmade product one"
+               onerror="this.outerHTML='<div class=&quot;missing&quot;>Image missing: product-1.jpg</div>';">
           <div class="product-info">
             <h3>Handmade Creation 01</h3>
-            <p>A unique handmade piece, created with attention to detail.</p>
-            <div class="price">₹ Add Price</div>
-            <a class="btn order-link" href="#contact">Enquire Now</a>
+            <p>A unique handmade piece created with attention to detail.</p>
+            <div class="price">₹200</div>
+            <a class="btn order-link" href="#contact"
+               data-product="Handmade Creation 01">Enquire Now</a>
           </div>
         </article>
 
         <article class="product-card">
-          <img src="product-2.jpg" alt="Handmade product two"
-               onerror="this.onerror=null;this.src='https://placehold.co/600x450/ead9c7/633d30?text=Product+2';">
+          <img src="product-2.jpg"
+               alt="Clayor handmade product two"
+               onerror="this.outerHTML='<div class=&quot;missing&quot;>Image missing: product-2.jpg</div>';">
           <div class="product-info">
             <h3>Handmade Creation 02</h3>
-            <p>A thoughtful design made for gifting or everyday beauty.</p>
-            <div class="price">₹ Add Price</div>
-            <a class="btn order-link" href="#contact">Enquire Now</a>
+            <p>A thoughtful design for gifting or everyday beauty.</p>
+            <div class="price">₹200</div>
+            <a class="btn order-link" href="#contact"
+               data-product="Handmade Creation 02">Enquire Now</a>
           </div>
         </article>
 
         <article class="product-card">
-          <img src="product-3.jpg" alt="Handmade product three"
-               onerror="this.onerror=null;this.src='https://placehold.co/600x450/ead9c7/633d30?text=Product+3';">
+          <img src="product-3.jpg"
+               alt="Clayor handmade product three"
+               onerror="this.outerHTML='<div class=&quot;missing&quot;>Image missing: product-3.jpg</div>';">
           <div class="product-info">
             <h3>Handmade Creation 03</h3>
-            <p>Made in small batches, with its own individual character.</p>
-            <div class="price">₹ Add Price</div>
-            <a class="btn order-link" href="#contact">Enquire Now</a>
+            <p>A special handmade creation made with care.</p>
+            <div class="price">₹200</div>
+            <a class="btn order-link" href="#contact"
+               data-product="Handmade Creation 03">Enquire Now</a>
           </div>
         </article>
 
@@ -380,79 +409,97 @@
     </section>
 
     <section class="about" id="about">
-      <!-- Replace owner.jpg with the owner's actual photo -->
-      <img src="owner.jpg.jpeg"
-           alt="The owner and maker"
-           onerror="this.onerror=null;this.src='https://placehold.co/700x800/e4cdb7/633d30?text=Owner+Photo';">
+
+      <img src="owner.jpeg"
+           alt="Clayor owner"
+           onerror="this.outerHTML='<div class=&quot;missing&quot;>Owner image not found: owner.jpeg</div>';"
+      >
 
       <div>
         <span class="eyebrow">The person behind the craft</span>
         <h2>Meet Our Owner</h2>
+
         <p>
-          Every handmade creation begins with an idea and a pair of caring hands.
-          Our owner brings creativity, patience and personal attention to every piece.
+          Every handmade creation begins with an idea and caring hands.
+          Our owner brings creativity, patience and personal attention
+          to every piece.
         </p>
+
         <p>
-          We believe handmade products are special because they carry the time,
-          thought and effort of the person who makes them.
+          We believe handmade products are special because they carry
+          the time, thought and effort of the person who makes them.
         </p>
-        <p><strong>Owner's Name:</strong> Add Owner Name Here</p>
-        <p><strong>Our Mission:</strong> To share beautiful handmade products with more people.</p>
+
+        <p><strong>Owner's Name:</strong> Clayor Founder</p>
+        <p><strong>Location:</strong> Chakdah, Nadia, West Bengal, India</p>
+        <p><strong>Our Mission:</strong> To share beautiful handmade products with everyone.</p>
+
         <a href="#contact" class="btn">Contact Us</a>
       </div>
+
     </section>
 
     <section id="process">
       <div class="section-heading">
         <span class="eyebrow">From idea to creation</span>
-        <h2>How We Make It</h2>
-        <p>A glimpse into the care and creativity behind our handmade products.</p>
+        <h2>Our Creative Process</h2>
+        <p>
+          A glimpse into the care and creativity behind our products.
+        </p>
       </div>
 
       <div class="process-grid">
+
         <div class="process-card">
-          <img src="making-1.jpg.jpeg" alt="Choosing materials"
-               onerror="this.onerror=null;this.src='https://placehold.co/600x400/ead9c7/633d30?text=Step+1';">
+          <img src="product-1.jpg"
+               alt="Product design"
+               onerror="this.outerHTML='<div class=&quot;missing&quot;>Product image not found</div>';">
           <h3>01. The Idea</h3>
-          <p>We plan the design and select suitable materials.</p>
+          <p>We plan the design and choose suitable materials.</p>
         </div>
 
         <div class="process-card">
-          <img src="making-2.jpg.jpeg" alt="Making a handmade product"
-               onerror="this.onerror=null;this.src='https://placehold.co/600x400/ead9c7/633d30?text=Step+2';">
-          <h3>02. Handmade with Care</h3>
-          <p>Each creation is shaped and finished with attention to detail.</p>
+          <img src="product-2.jpg"
+               alt="Handmade creation"
+               onerror="this.outerHTML='<div class=&quot;missing&quot;>Product image not found</div>';">
+          <h3>02. Made with Care</h3>
+          <p>Each creation is finished with attention to detail.</p>
         </div>
 
         <div class="process-card">
-          <img src="making-3.jpg.jpeg" alt="Finished handmade product"
-               onerror="this.onerror=null;this.src='https://placehold.co/600x400/ead9c7/633d30?text=Step+3';">
+          <img src="product-3.jpg"
+               alt="Finished handmade product"
+               onerror="this.outerHTML='<div class=&quot;missing&quot;>Product image not found</div>';">
           <h3>03. Ready to Share</h3>
-          <p>We check the finished piece before preparing it for you.</p>
+          <p>We check each finished piece before preparing it for you.</p>
         </div>
+
       </div>
     </section>
 
     <section class="contact" id="contact">
       <span class="eyebrow" style="color:#f0cf8a;">Let's connect</span>
       <h2>Want Something Special?</h2>
+
       <p>
-        Ask about our available products, prices or custom handmade orders.
+        Ask about our available products, prices or custom orders.
         We would love to hear from you.
       </p>
 
-      <!-- IMPORTANT: Replace 91XXXXXXXXXX with your WhatsApp number.
-           Use country code, digits only; do not include + or spaces. -->
-      <a class="btn" id="whatsapp-link"
+      <!-- Replace this with the owner's real WhatsApp number -->
+      <a class="btn"
+         id="whatsapp-link"
          href="https://wa.me/91XXXXXXXXXX"
-         target="_blank" rel="noopener noreferrer">
+         target="_blank"
+         rel="noopener noreferrer">
         Chat on WhatsApp
       </a>
 
       <p style="margin-top:15px;font-size:13px;">
-        Replace the sample details and photos with your real information.
+        Clayor Handmade · Chakdah, Nadia, West Bengal
       </p>
     </section>
+
   </main>
 
   <footer>
@@ -461,7 +508,37 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Add the selected product name to the WhatsApp message.
+    document.querySelectorAll(".order-link").forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        const product = this.dataset.product;
+        const message = "Hello Clayor! I am interested in " +
+          product + " priced at ₹200.";
+
+        const whatsapp = document.getElementById("whatsapp-link");
+        const phone = "91XXXXXXXXXX";
+
+        if (phone.includes("X")) {
+          document.getElementById("contact").scrollIntoView({
+            behavior: "smooth"
+          });
+          alert("Please add the owner's real WhatsApp number in the HTML code.");
+          return;
+        }
+
+        whatsapp.href = "https://wa.me/" + phone +
+          "?text=" + encodeURIComponent(message);
+
+        document.getElementById("contact").scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
   </script>
 
 </body>
