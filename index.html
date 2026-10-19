@@ -1,215 +1,468 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover beautiful handmade gifts, crafts and home decor made with care.">
-  <title>Craft Studio Shrabani | Handmade with Love</title>
+  <meta name="description" content="Discover beautiful handmade creations, crafted with care and creativity.">
+  <title>Clayor | Handmade with Love</title>
+
   <style>
     :root {
-      --cream: #fffaf2;
-      --brown: #493329;
-      --terra: #b9674e;
-      --green: #52634b;
+      --brown: #633d30;
+      --terracotta: #a75f46;
+      --cream: #fff8ef;
+      --gold: #c49a52;
+      --text: #38271f;
     }
-    * { box-sizing: border-box; }
-    body {
+
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
       font-family: Arial, sans-serif;
       background: var(--cream);
-      color: var(--brown);
+      color: var(--text);
       line-height: 1.6;
     }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     header {
+      background: var(--brown);
+      color: white;
+      padding: 18px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 7%;
-      background: var(--cream);
-      position: sticky;
-      top: 0;
-      z-index: 5;
-      border-bottom: 1px solid #eee1d4;
+      flex-wrap: wrap;
+      gap: 15px;
     }
-    .logo { font-size: 21px; font-weight: bold; }
-    nav a {
-      color: var(--brown);
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px;
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 30px;
+      color: #f0cf8a;
+      letter-spacing: 2px;
     }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a:hover {
+      color: #f0cf8a;
+    }
+
     .hero {
-      padding: 75px 8%;
-      text-align: center;
-      background: #f1e2d1;
+      min-height: 470px;
+      padding: 65px 7%;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 35px;
+      background: #f2e2d1;
     }
-    .hero small { letter-spacing: 3px; text-transform: uppercase; }
-    h1 { font-size: clamp(36px, 6vw, 62px); line-height: 1.12; margin: 20px 0; }
-    .hero p { max-width: 560px; margin: 0 auto 28px; }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1.15;
+      margin: 15px 0;
+    }
+
+    .eyebrow {
+      color: var(--terracotta);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .hero p {
+      max-width: 500px;
+      margin-bottom: 25px;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 160px 160px 12px 12px;
+      border: 5px solid white;
+    }
+
     .btn {
       display: inline-block;
-      padding: 13px 24px;
       background: var(--brown);
       color: white;
-      text-decoration: none;
+      padding: 12px 22px;
       border-radius: 5px;
-      border: none;
-      cursor: pointer;
-      font-size: 15px;
+      margin: 5px 7px 5px 0;
+      font-weight: bold;
     }
-    section { padding: 55px 7%; }
-    .section-title { text-align: center; margin-bottom: 30px; }
-    .section-title h2 { font-size: 32px; margin-bottom: 5px; }
-    .section-title p { color: #75665b; }
+
+    .btn:hover {
+      background: var(--terracotta);
+    }
+
+    section {
+      padding: 65px 7%;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(30px, 4vw, 42px);
+      margin: 8px 0;
+    }
+
+    .section-heading p {
+      max-width: 600px;
+      margin: auto;
+      color: #705d51;
+    }
+
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
     }
-    .card {
+
+    .product-card {
       background: white;
       border-radius: 10px;
       overflow: hidden;
-      border: 1px solid #eee3d8;
+      box-shadow: 0 5px 20px #633d3012;
     }
-    .card img {
-      display: block;
+
+    .product-card img {
       width: 100%;
-      height: 225px;
+      height: 250px;
       object-fit: cover;
-      background: #ead8c4;
+      display: block;
+      background: #ead9c7;
     }
-    .card-content { padding: 18px; }
-    .card h3 { margin: 0 0 8px; }
-    .price { font-weight: bold; color: var(--terra); font-size: 19px; }
-    .card p { color: #75665b; font-size: 14px; }
-    .card button { width: 100%; margin-top: 8px; }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      margin-bottom: 7px;
+    }
+
+    .price {
+      color: var(--terracotta);
+      font-size: 20px;
+      font-weight: bold;
+      margin: 12px 0;
+    }
+
     .about {
-      background: #e9eee3;
-      text-align: center;
+      background: #efe0d1;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 40px;
+      align-items: center;
     }
-    .about p { max-width: 680px; margin: auto; }
-    .contact { text-align: center; }
-    footer {
-      text-align: center;
+
+    .about img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      border-radius: 10px;
+      background: #ddc5ad;
+    }
+
+    .about h2 {
+      font: 40px Georgia, serif;
+      margin: 10px 0 18px;
+    }
+
+    .about p {
+      margin-bottom: 15px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .process-card {
+      background: white;
       padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid #ead8c6;
+    }
+
+    .process-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 7px;
+      margin-bottom: 15px;
+      background: #ead9c7;
+    }
+
+    .contact {
+      text-align: center;
       background: var(--brown);
       color: white;
+    }
+
+    .contact h2 {
+      font: 40px Georgia, serif;
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    .contact .btn {
+      background: var(--gold);
+      color: #24180f;
+    }
+
+    footer {
+      background: #39241c;
+      color: #f8e8d8;
+      text-align: center;
+      padding: 22px;
       font-size: 14px;
     }
-    @media (max-width: 600px) {
-      header { padding: 15px 5%; flex-wrap: wrap; gap: 10px; }
-      nav a { margin-left: 10px; font-size: 12px; }
-      .hero { padding: 55px 6%; }
-      section { padding: 42px 5%; }
+
+    @media (max-width: 800px) {
+      .hero,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .hero img {
+        height: 300px;
+      }
+
+      .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about img {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 45px 5%;
+      }
+
+      .hero {
+        padding: 45px 5%;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <header>
-    <div class="logo">Craft Studio Shrabani</div>
+    <a href="#" class="logo">CLAYOR</a>
     <nav>
       <a href="#home">Home</a>
-      <a href="#shop">Products</a>
+      <a href="#products">Products</a>
       <a href="#about">Our Story</a>
+      <a href="#process">Our Process</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <small>Made by hand, made with heart</small>
-      <h1>Little Things.<br>Made with Love.</h1>
-      <p>Discover thoughtful handmade creations that bring warmth, beauty and personality to your everyday life.</p>
-      <a class="btn" href="#shop">Explore Our Collection</a>
+      <div>
+        <span class="eyebrow">Handmade • Heartmade</span>
+        <h1>Beautiful Things, Made by Hand.</h1>
+        <p>
+          Discover thoughtfully handcrafted creations made with patience,
+          creativity and love. Every piece has its own story.
+        </p>
+        <a href="#products" class="btn">Explore Collection</a>
+        <a href="#about" class="btn">Meet the Owner</a>
+      </div>
+
+      <!-- Replace hero.jpg with your own product or studio photo -->
+      <img src="hero.jpg"
+           alt="Handmade creations by Clayor"
+           onerror="this.onerror=null;this.src='https://placehold.co/700x900/f2e2d1/633d30?text=Your+Handmade+Photo';">
     </section>
 
-    <section id="shop">
-      <div class="section-title">
+    <section id="products">
+      <div class="section-heading">
+        <span class="eyebrow">Made with care</span>
         <h2>Our Handmade Collection</h2>
-        <p>Unique creations, crafted with care.</p>
+        <p>Explore unique creations, carefully made by hand. Contact us for availability and custom orders.</p>
       </div>
 
       <div class="products">
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=700&q=80" alt="Decorative handmade crafts">
-          <div class="card-content">
-            <h3>Handmade Home Decor</h3>
-            <p>Beautiful decorative pieces for your home.</p>
-            <div class="price">₹499</div>
-            <button class="btn" onclick="enquire('Handmade Home Decor')">Enquire on WhatsApp</button>
+
+        <article class="product-card">
+          <img src="product-1.jpg" alt="Handmade product one"
+               onerror="this.onerror=null;this.src='https://placehold.co/600x450/ead9c7/633d30?text=Product+1';">
+          <div class="product-info">
+            <h3>Handmade Creation 01</h3>
+            <p>A unique handmade piece, created with attention to detail.</p>
+            <div class="price">₹ Add Price</div>
+            <a class="btn order-link" href="#contact">Enquire Now</a>
           </div>
         </article>
 
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=700&q=80" alt="Decorative candles">
-          <div class="card-content">
-            <h3>Handcrafted Candles</h3>
-            <p>Add a warm glow to special moments.</p>
-            <div class="price">₹299</div>
-            <button class="btn" onclick="enquire('Handcrafted Candles')">Enquire on WhatsApp</button>
+        <article class="product-card">
+          <img src="product-2.jpg" alt="Handmade product two"
+               onerror="this.onerror=null;this.src='https://placehold.co/600x450/ead9c7/633d30?text=Product+2';">
+          <div class="product-info">
+            <h3>Handmade Creation 02</h3>
+            <p>A thoughtful design made for gifting or everyday beauty.</p>
+            <div class="price">₹ Add Price</div>
+            <a class="btn order-link" href="#contact">Enquire Now</a>
           </div>
         </article>
 
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=700&q=80" alt="Handcrafted pottery">
-          <div class="card-content">
-            <h3>Handmade Pottery</h3>
-            <p>Artisan-inspired pieces for everyday living.</p>
-            <div class="price">₹399</div>
-            <button class="btn" onclick="enquire('Handmade Pottery')">Enquire on WhatsApp</button>
+        <article class="product-card">
+          <img src="product-3.jpg" alt="Handmade product three"
+               onerror="this.onerror=null;this.src='https://placehold.co/600x450/ead9c7/633d30?text=Product+3';">
+          <div class="product-info">
+            <h3>Handmade Creation 03</h3>
+            <p>Made in small batches, with its own individual character.</p>
+            <div class="price">₹ Add Price</div>
+            <a class="btn order-link" href="#contact">Enquire Now</a>
           </div>
         </article>
+
       </div>
-      <p style="text-align:center;font-size:13px;color:#75665b">
-        Sample products and prices — replace these with your actual items.
-      </p>
     </section>
 
     <section class="about" id="about">
-      <div class="section-title">
-        <h2>Our Story</h2>
+      <!-- Replace owner.jpg with the owner's actual photo -->
+      <img src="owner.jpg"
+           alt="The owner and maker"
+           onerror="this.onerror=null;this.src='https://placehold.co/700x800/e4cdb7/633d30?text=Owner+Photo';">
+
+      <div>
+        <span class="eyebrow">The person behind the craft</span>
+        <h2>Meet Our Owner</h2>
+        <p>
+          Every handmade creation begins with an idea and a pair of caring hands.
+          Our owner brings creativity, patience and personal attention to every piece.
+        </p>
+        <p>
+          We believe handmade products are special because they carry the time,
+          thought and effort of the person who makes them.
+        </p>
+        <p><strong>Owner's Name:</strong> Add Owner Name Here</p>
+        <p><strong>Our Mission:</strong> To share beautiful handmade products with more people.</p>
+        <a href="#contact" class="btn">Contact Us</a>
       </div>
-      <p>
-        Welcome to Craft Studio Shrabani, a space celebrating creativity
-        and the beauty of handmade products. We believe every creation
-        can tell a story. Our goal is to bring you thoughtful products
-        that make everyday moments feel special.
-      </p>
+    </section>
+
+    <section id="process">
+      <div class="section-heading">
+        <span class="eyebrow">From idea to creation</span>
+        <h2>How We Make It</h2>
+        <p>A glimpse into the care and creativity behind our handmade products.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <img src="making-1.jpg" alt="Choosing materials"
+               onerror="this.onerror=null;this.src='https://placehold.co/600x400/ead9c7/633d30?text=Step+1';">
+          <h3>01. The Idea</h3>
+          <p>We plan the design and select suitable materials.</p>
+        </div>
+
+        <div class="process-card">
+          <img src="making-2.jpg" alt="Making a handmade product"
+               onerror="this.onerror=null;this.src='https://placehold.co/600x400/ead9c7/633d30?text=Step+2';">
+          <h3>02. Handmade with Care</h3>
+          <p>Each creation is shaped and finished with attention to detail.</p>
+        </div>
+
+        <div class="process-card">
+          <img src="making-3.jpg" alt="Finished handmade product"
+               onerror="this.onerror=null;this.src='https://placehold.co/600x400/ead9c7/633d30?text=Step+3';">
+          <h3>03. Ready to Share</h3>
+          <p>We check the finished piece before preparing it for you.</p>
+        </div>
+      </div>
     </section>
 
     <section class="contact" id="contact">
-      <div class="section-title">
-        <h2>Let's Connect</h2>
-        <p>Interested in a product or looking for a special gift?</p>
-      </div>
-      <a class="btn" href="#shop">Explore Products</a>
-      <p>WhatsApp: Add your business number before publishing.</p>
+      <span class="eyebrow" style="color:#f0cf8a;">Let's connect</span>
+      <h2>Want Something Special?</h2>
+      <p>
+        Ask about our available products, prices or custom handmade orders.
+        We would love to hear from you.
+      </p>
+
+      <!-- IMPORTANT: Replace 91XXXXXXXXXX with your WhatsApp number.
+           Use country code, digits only; do not include + or spaces. -->
+      <a class="btn" id="whatsapp-link"
+         href="https://wa.me/91XXXXXXXXXX"
+         target="_blank" rel="noopener noreferrer">
+        Chat on WhatsApp
+      </a>
+
+      <p style="margin-top:15px;font-size:13px;">
+        Replace the sample details and photos with your real information.
+      </p>
     </section>
   </main>
 
   <footer>
-    <p>Craft Studio Shrabani</p>
-    <p>Handmade with love. © <span id="year"></span></p>
+    <p>© <span id="year"></span> Clayor Handmade. Made with love.</p>
+    <p>Handmade with care, shared with love.</p>
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    function enquire(product) {
-      const phone = "91XXXXXXXXXX"; // Replace with your WhatsApp number
-      const message = "Hello! I am interested in " + product + ". Please share more details.";
-      if (phone.includes("X")) {
-        alert("Please add your WhatsApp number in the website code first.");
-        return;
-      }
-      window.open(
-        "https://wa.me/" + phone + "?text=" + encodeURIComponent(message),
-        "_blank"
-      );
-    }
   </script>
+
 </body>
 </html>
-
