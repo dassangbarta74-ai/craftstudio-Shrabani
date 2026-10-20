@@ -1,20 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Discover handmade creations by Clayor. Beautiful products made with care.">
+  <title>Handmade Collection | Crafted with Love</title>
 
-  <title>Clayor | Handmade with Love</title>
+  <meta name="description" content="Discover unique handmade products, crafted with care in Chakdaha, Nadia, West Bengal.">
 
   <style>
     :root {
-      --brown: #633d30;
-      --terracotta: #a75f46;
+      --brown: #59392d;
+      --terracotta: #a85f45;
+      --gold: #c6a15b;
       --cream: #fff8ef;
-      --gold: #c49a52;
       --text: #38271f;
     }
 
@@ -30,14 +29,9 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: var(--cream);
       color: var(--text);
+      background: var(--cream);
       line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
     }
 
     header {
@@ -52,10 +46,9 @@
     }
 
     .logo {
-      font-family: Georgia, serif;
-      font-size: 30px;
-      color: #f0cf8a;
-      letter-spacing: 3px;
+      color: #f1d59c;
+      font: bold 28px Georgia, serif;
+      letter-spacing: 2px;
     }
 
     nav {
@@ -64,36 +57,45 @@
       gap: 18px;
     }
 
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
     nav a:hover {
-      color: #f0cf8a;
+      color: #f1d59c;
     }
 
     .hero {
-      padding: 65px 7%;
+      background: #f0dfce;
+      padding: 60px 7%;
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       align-items: center;
       gap: 35px;
-      background: #f2e2d1;
-    }
-
-    .hero h1 {
-      font: bold clamp(38px, 5vw, 64px) Georgia, serif;
-      line-height: 1.15;
-      margin: 15px 0;
     }
 
     .eyebrow {
       color: var(--terracotta);
-      text-transform: uppercase;
-      letter-spacing: 3px;
       font-size: 12px;
       font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, serif;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.15;
+      margin: 15px 0;
     }
 
     .hero p {
-      max-width: 500px;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
+      max-width: 520px;
     }
 
     .hero img {
@@ -108,10 +110,11 @@
       display: inline-block;
       background: var(--brown);
       color: white;
-      padding: 12px 22px;
+      text-decoration: none;
+      padding: 12px 20px;
       border-radius: 5px;
-      margin: 5px 7px 5px 0;
       font-weight: bold;
+      margin: 5px 5px 5px 0;
     }
 
     .btn:hover {
@@ -119,7 +122,7 @@
     }
 
     section {
-      padding: 65px 7%;
+      padding: 60px 7%;
     }
 
     .section-heading {
@@ -127,15 +130,9 @@
       margin-bottom: 35px;
     }
 
-    .section-heading h2,
-    .about h2,
-    .contact h2 {
-      font-family: Georgia, serif;
-      margin: 10px 0;
-    }
-
     .section-heading h2 {
       font-size: clamp(30px, 4vw, 42px);
+      margin: 8px 0;
     }
 
     .section-heading p {
@@ -154,14 +151,14 @@
       background: white;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 5px 20px #633d3012;
+      box-shadow: 0 5px 22px #59392d15;
     }
 
     .product-card img {
       width: 100%;
       height: 250px;
-      object-fit: cover;
       display: block;
+      object-fit: cover;
       background: #ead9c7;
     }
 
@@ -170,28 +167,43 @@
     }
 
     .product-info h3 {
-      font: 22px Georgia, serif;
-      margin-bottom: 7px;
+      font-size: 23px;
+      margin-bottom: 8px;
     }
 
     .price {
       color: var(--terracotta);
-      font-size: 22px;
+      font-size: 23px;
       font-weight: bold;
       margin: 12px 0;
+    }
+
+    .order-btn {
+      display: block;
+      text-align: center;
+      background: #218c52;
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .order-btn:hover {
+      background: #176b3d;
     }
 
     .about {
       background: #efe0d1;
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
-      gap: 40px;
       align-items: center;
+      gap: 40px;
     }
 
     .about img {
       width: 100%;
-      height: 390px;
+      height: 380px;
       object-fit: cover;
       border-radius: 10px;
       background: #ddc5ad;
@@ -199,33 +211,19 @@
 
     .about h2 {
       font-size: 40px;
+      margin: 10px 0 18px;
     }
 
     .about p {
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
 
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .process-card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      border: 1px solid #ead8c6;
-    }
-
-    .process-card img {
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
+    .location {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 12px 16px;
+      background: #fff8ef;
       border-radius: 7px;
-      margin-bottom: 15px;
-      background: #ead9c7;
     }
 
     .contact {
@@ -235,59 +233,35 @@
     }
 
     .contact h2 {
-      font-size: 40px;
-      margin-bottom: 12px;
+      font-size: 38px;
+      margin: 10px 0;
     }
 
     .contact p {
       max-width: 600px;
-      margin: 0 auto 20px;
+      margin: 0 auto 18px;
     }
 
     .contact .btn {
       background: var(--gold);
-      color: #24180f;
+      color: #281b13;
     }
 
     footer {
-      background: #39241c;
-      color: #f8e8d8;
       text-align: center;
       padding: 22px;
+      background: #39241c;
+      color: #f8e8d8;
       font-size: 14px;
     }
 
-    .missing {
-      min-height: 120px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 15px;
-      text-align: center;
-      color: #705d51;
-      background: #ead9c7;
-    }
-
     @media (max-width: 800px) {
-      .hero,
-      .about {
+      .hero, .about {
         grid-template-columns: 1fr;
-      }
-
-      .hero img {
-        height: 300px;
       }
 
       .products {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .process-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about img {
-        height: 300px;
       }
     }
 
@@ -307,11 +281,15 @@
       }
 
       section {
-        padding: 45px 5%;
+        padding: 42px 5%;
       }
 
       .hero {
-        padding: 45px 5%;
+        padding: 42px 5%;
+      }
+
+      .hero img, .about img {
+        height: 290px;
       }
     }
   </style>
@@ -320,13 +298,12 @@
 <body>
 
   <header>
-    <a href="#home" class="logo">CLAYOR</a>
+    <a href="#home" class="logo">HANDMADE</a>
 
     <nav>
       <a href="#home">Home</a>
       <a href="#products">Products</a>
-      <a href="#about">Our Story</a>
-      <a href="#process">Our Process</a>
+      <a href="#about">Owner</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -335,73 +312,76 @@
 
     <section class="hero" id="home">
       <div>
-        <span class="eyebrow">Handmade • Heartmade</span>
-
-        <h1>Beautiful Things, Made by Hand.</h1>
+        <span class="eyebrow">Handmade with Love</span>
+        <h1>Beautiful Creations, Made by Hand.</h1>
 
         <p>
-          Discover thoughtfully handcrafted creations made with
-          patience, creativity and love. Every piece has its own story.
+          Explore our unique handmade creations. Every product is made
+          with care, creativity and attention to detail.
         </p>
 
-        <a href="#products" class="btn">Explore Collection</a>
-        <a href="#about" class="btn">Meet the Owner</a>
+        <a href="#products" class="btn">Explore Products</a>
       </div>
 
-      <!-- The hero uses your first product photo -->
+      <!-- Replace hero.jpg with your product photo if available -->
       <img src="product-1.jpg"
-           alt="Handmade collection by Clayor"
-           onerror="this.outerHTML='<div class=&quot;missing&quot;>Product image not found: product-1.jpg</div>';">
+           alt="Beautiful handmade creation">
     </section>
 
     <section id="products">
       <div class="section-heading">
-        <span class="eyebrow">Made with care</span>
-        <h2>Our Handmade Collection</h2>
-        <p>
-          Explore our handmade creations. Each product is priced at ₹200.
-          Contact us for availability and orders.
-        </p>
+        <span class="eyebrow">Our Collection</span>
+        <h2>Handmade Products</h2>
+        <p>Choose your favourite creation and order directly through WhatsApp.</p>
       </div>
 
       <div class="products">
 
         <article class="product-card">
-          <img src="product-1.jpg"
-               alt="Clayor handmade product one"
-               onerror="this.outerHTML='<div class=&quot;missing&quot;>Image missing: product-1.jpg</div>';">
+          <img src="product-1.jpg" alt="Handmade Product 1">
+
           <div class="product-info">
-            <h3>Handmade Creation 01</h3>
-            <p>A unique handmade piece created with attention to detail.</p>
+            <h3>Handmade Product 1</h3>
+            <p>A unique handmade creation, carefully crafted with love.</p>
             <div class="price">₹200</div>
-            <a class="btn order-link" href="#contact"
-               data-product="Handmade Creation 01">Enquire Now</a>
+
+            <a class="order-btn"
+               href="https://wa.me/919832251317?text=Hello%2C%20I%20want%20to%20order%20Handmade%20Product%201%20for%20Rs.%20200."
+               target="_blank" rel="noopener noreferrer">
+              Order Now on WhatsApp
+            </a>
           </div>
         </article>
 
         <article class="product-card">
-          <img src="product-2.jpg"
-               alt="Clayor handmade product two"
-               onerror="this.outerHTML='<div class=&quot;missing&quot;>Image missing: product-2.jpg</div>';">
+          <img src="product-2.jpg" alt="Handmade Product 2">
+
           <div class="product-info">
-            <h3>Handmade Creation 02</h3>
-            <p>A thoughtful design for gifting or everyday beauty.</p>
+            <h3>Handmade Product 2</h3>
+            <p>A beautiful handmade item, made with care and creativity.</p>
             <div class="price">₹200</div>
-            <a class="btn order-link" href="#contact"
-               data-product="Handmade Creation 02">Enquire Now</a>
+
+            <a class="order-btn"
+               href="https://wa.me/919832251317?text=Hello%2C%20I%20want%20to%20order%20Handmade%20Product%202%20for%20Rs.%20200."
+               target="_blank" rel="noopener noreferrer">
+              Order Now on WhatsApp
+            </a>
           </div>
         </article>
 
         <article class="product-card">
-          <img src="product-3.jpg"
-               alt="Clayor handmade product three"
-               onerror="this.outerHTML='<div class=&quot;missing&quot;>Image missing: product-3.jpg</div>';">
+          <img src="product-3.jpg" alt="Handmade Product 3">
+
           <div class="product-info">
-            <h3>Handmade Creation 03</h3>
-            <p>A special handmade creation made with care.</p>
+            <h3>Handmade Product 3</h3>
+            <p>A special handmade creation, perfect for gifting.</p>
             <div class="price">₹200</div>
-            <a class="btn order-link" href="#contact"
-               data-product="Handmade Creation 03">Enquire Now</a>
+
+            <a class="order-btn"
+               href="https://wa.me/919832251317?text=Hello%2C%20I%20want%20to%20order%20Handmade%20Product%203%20for%20Rs.%20200."
+               target="_blank" rel="noopener noreferrer">
+              Order Now on WhatsApp
+            </a>
           </div>
         </article>
 
@@ -409,136 +389,70 @@
     </section>
 
     <section class="about" id="about">
-
-      <img src="owner.jpeg"
-           alt="Clayor owner"
-           onerror="this.outerHTML='<div class=&quot;missing&quot;>Owner image not found: owner.jpeg</div>';"
-      >
+      <!-- Upload the owner's actual photo as owner.jpg -->
+      <img src="owner.jpg" alt="Handmade business owner">
 
       <div>
-        <span class="eyebrow">The person behind the craft</span>
+        <span class="eyebrow">Meet the Creator</span>
         <h2>Meet Our Owner</h2>
 
         <p>
-          Every handmade creation begins with an idea and caring hands.
-          Our owner brings creativity, patience and personal attention
-          to every piece.
+          Behind every handmade product is a person who puts time,
+          skill and creativity into every detail.
         </p>
 
         <p>
-          We believe handmade products are special because they carry
-          the time, thought and effort of the person who makes them.
+          Our owner creates each product with care and a passion
+          for handmade craftsmanship.
         </p>
 
-        <p><strong>Owner's Name:</strong> Clayor Founder</p>
-        <p><strong>Location:</strong> Chakdah, Nadia, West Bengal, India</p>
-        <p><strong>Our Mission:</strong> To share beautiful handmade products with everyone.</p>
+        <div class="location">
+          <strong>Our Location</strong><br>
+          Chakdaha, Nadia,<br>
+          West Bengal 741222
+        </div>
 
-        <a href="#contact" class="btn">Contact Us</a>
-      </div>
-
-    </section>
-
-    <section id="process">
-      <div class="section-heading">
-        <span class="eyebrow">From idea to creation</span>
-        <h2>Our Creative Process</h2>
-        <p>
-          A glimpse into the care and creativity behind our products.
+        <p style="margin-top: 18px;">
+          <a class="btn"
+             href="https://www.google.com/maps/search/?api=1&query=Chakdaha%2C+Nadia%2C+West+Bengal+741222"
+             target="_blank" rel="noopener noreferrer">
+            View Location on Maps
+          </a>
         </p>
-      </div>
-
-      <div class="process-grid">
-
-        <div class="process-card">
-          <img src="product-1.jpg"
-               alt="Product design"
-               onerror="this.outerHTML='<div class=&quot;missing&quot;>Product image not found</div>';">
-          <h3>01. The Idea</h3>
-          <p>We plan the design and choose suitable materials.</p>
-        </div>
-
-        <div class="process-card">
-          <img src="product-2.jpg"
-               alt="Handmade creation"
-               onerror="this.outerHTML='<div class=&quot;missing&quot;>Product image not found</div>';">
-          <h3>02. Made with Care</h3>
-          <p>Each creation is finished with attention to detail.</p>
-        </div>
-
-        <div class="process-card">
-          <img src="product-3.jpg"
-               alt="Finished handmade product"
-               onerror="this.outerHTML='<div class=&quot;missing&quot;>Product image not found</div>';">
-          <h3>03. Ready to Share</h3>
-          <p>We check each finished piece before preparing it for you.</p>
-        </div>
-
       </div>
     </section>
 
     <section class="contact" id="contact">
-      <span class="eyebrow" style="color:#f0cf8a;">Let's connect</span>
-      <h2>Want Something Special?</h2>
+      <span class="eyebrow" style="color:#f1d59c;">We'd Love to Hear from You</span>
+      <h2>Ready to Order?</h2>
 
       <p>
-        Ask about our available products, prices or custom orders.
-        We would love to hear from you.
+        Choose any handmade product and tap its Order Now button.
+        WhatsApp will open with a message containing the product name
+        and price. You can review and send the message there.
       </p>
 
-      <!-- Replace this with the owner's real WhatsApp number -->
       <a class="btn"
-         id="whatsapp-link"
-         href="https://wa.me/91XXXXXXXXXX"
-         target="_blank"
-         rel="noopener noreferrer">
+         href="https://wa.me/919832251317?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20handmade%20products."
+         target="_blank" rel="noopener noreferrer">
         Chat on WhatsApp
       </a>
 
-      <p style="margin-top:15px;font-size:13px;">
-        Clayor Handmade · Chakdah, Nadia, West Bengal
+      <p style="margin-top:15px;">
+        Location: Chakdaha, Nadia, West Bengal 741222
       </p>
     </section>
 
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Clayor Handmade. Made with love.</p>
-    <p>Handmade with care, shared with love.</p>
+    <p>© <span id="year"></span> Handmade Collection. All rights reserved.</p>
+    <p>Crafted with care, shared with love.</p>
   </footer>
 
   <script>
     document.getElementById("year").textContent =
       new Date().getFullYear();
-
-    // Add the selected product name to the WhatsApp message.
-    document.querySelectorAll(".order-link").forEach(function(link) {
-      link.addEventListener("click", function(event) {
-        event.preventDefault();
-
-        const product = this.dataset.product;
-        const message = "Hello Clayor! I am interested in " +
-          product + " priced at ₹200.";
-
-        const whatsapp = document.getElementById("whatsapp-link");
-        const phone = "91XXXXXXXXXX";
-
-        if (phone.includes("X")) {
-          document.getElementById("contact").scrollIntoView({
-            behavior: "smooth"
-          });
-          alert("Please add the owner's real WhatsApp number in the HTML code.");
-          return;
-        }
-
-        whatsapp.href = "https://wa.me/" + phone +
-          "?text=" + encodeURIComponent(message);
-
-        document.getElementById("contact").scrollIntoView({
-          behavior: "smooth"
-        });
-      });
-    });
   </script>
 
 </body>
