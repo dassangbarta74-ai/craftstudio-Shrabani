@@ -1,424 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Handmade Collection | Crafted with Love</title>
-  <meta name="description" content="Discover handmade products crafted with care in Chakdaha, Nadia, West Bengal.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clayor | Handmade Clay Jewellery by Shrabani Paul, Chakdaha</title>
+<meta name="description" content="Clayor makes handmade clay jewellery sets, a necklace with matching earrings, by Shrabani Paul in Chakdaha, Nadia, West Bengal. Order directly on Telegram.">
+<meta name="theme-color" content="#171a3a">
+<meta property="og:title" content="Clayor | Handmade Clay Jewellery">
+<meta property="og:description" content="Handmade clay necklace and earring sets from Chakdaha, West Bengal. Order on Telegram.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌻%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--ink:#171a3a;--paper:#faf6ee;--muted:#5d5f7a;--sun:#f2a900;--tg:#1d8fcf;--line:#e4dccb}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font:400 17px/1.7 'Hind Siliguri',system-ui,sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.1;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{width:min(1160px,90%);margin:auto}
+section{padding:96px 0}
+main,footer{position:relative;z-index:1}
+@keyframes spin{to{transform:rotate(360deg)}}
 
-  <style>
-    :root {
-      --brown: #59392d;
-      --terracotta: #a85f45;
-      --gold: #c6a15b;
-      --cream: #fff8ef;
-      --text: #38271f;
-    }
+#fx{position:fixed;inset:0;z-index:0;pointer-events:none}
+.glow{display:none;position:fixed;left:0;top:0;width:360px;height:360px;margin:-180px 0 0 -180px;border-radius:50%;background:radial-gradient(#f2a9003d,transparent 65%);pointer-events:none;z-index:0}
+#bar{position:fixed;top:0;left:0;right:0;height:4px;z-index:100;background:linear-gradient(90deg,#f2a900,#c81f2d,#1f3fa6);transform-origin:0 50%;transform:scaleX(0)}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+header{position:sticky;top:0;z-index:50;background:#faf6eecc;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font:800 28px Fraunces,serif;display:flex;align-items:center;gap:8px}
+.logo i{font-style:normal;color:var(--sun);display:inline-block;animation:spin 8s linear infinite}
+nav{display:flex;gap:30px;font-weight:500;font-size:15px}
+nav a{background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 2px no-repeat;transition:background-size .3s;padding-bottom:3px}
+nav a:hover{background-size:100% 2px}
 
-    html { scroll-behavior: smooth; }
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:999px;font-weight:600;font-size:16px;border:2px solid var(--ink);cursor:pointer;position:relative;overflow:hidden;translate:var(--mx,0) var(--my,0);transition:transform .25s,box-shadow .25s,background .25s,color .25s,translate .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn svg{width:19px;height:19px;fill:currentColor;flex:none}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{box-shadow:0 12px 26px #171a3a40}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn-tg{background:var(--tg);border-color:var(--tg);color:#fff}
+.btn-tg:hover{box-shadow:0 12px 26px #1d8fcf66}
+.btn-tg::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,#fff7,transparent);transform:skewX(-20deg);transition:left .7s}
+.btn-tg:hover::after{left:130%}
 
-    body {
-      font-family: Arial, sans-serif;
-      color: var(--text);
-      background: var(--cream);
-      line-height: 1.6;
-    }
+.hero{padding:64px 0 90px;position:relative;overflow:hidden;isolation:isolate}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.blob{position:absolute;z-index:-1;filter:blur(60px);opacity:.55;border-radius:42% 58% 63% 37%/45% 40% 60% 55%;animation:morph 14s ease-in-out infinite alternate}
+.b1{width:420px;height:420px;background:#f9d77a;top:-80px;left:-100px}
+.b2{width:380px;height:380px;background:#f3a3ad;right:-60px;top:20px;animation-delay:-5s}
+.b3{width:340px;height:340px;background:#a9bff0;left:40%;bottom:-140px;animation-delay:-9s}
+@keyframes morph{50%{border-radius:60% 40% 35% 65%/55% 60% 40% 45%;transform:translate(40px,30px) rotate(40deg)}100%{border-radius:38% 62% 55% 45%/60% 38% 62% 40%;transform:translate(-30px,50px) rotate(-20deg) scale(1.1)}}
+.deco{position:absolute;pointer-events:none;z-index:-1}
+.deco svg{width:100%;animation:spin 50s linear infinite}
+.d1{width:430px;right:-150px;bottom:-160px;opacity:.3}
+.d2{width:320px;left:-90px;top:-100px;opacity:.25}
+.hero h1{font-size:clamp(44px,6.4vw,84px);font-weight:800}
+.w{display:inline-block;animation:up .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*.14s + .1s)}
+@keyframes up{from{opacity:0;transform:translateY(46px) rotate(5deg)}}
+.hero p{max-width:480px;margin:24px 0 32px;color:var(--muted);font-size:19px;animation:up 1s .8s both}
+.cta{display:flex;flex-wrap:wrap;gap:14px;animation:up 1s 1s both}
+.arches{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:end;translate:var(--px,0) var(--py,0);transition:translate .4s ease-out}
+.arch{border:0;padding:0;cursor:zoom-in;overflow:hidden;aspect-ratio:3/5.2;border-radius:999px 999px 14px 14px;background:var(--t);box-shadow:0 22px 40px #171a3a25;animation:rise 1s cubic-bezier(.2,.8,.2,1) both,bob 6s ease-in-out 1.7s infinite}
+.arch:nth-child(1){animation-delay:.1s,1.7s;--t:#fdeab8}
+.arch:nth-child(2){animation-delay:.28s,2.6s;--t:#fbd3d6;margin-bottom:46px}
+.arch:nth-child(3){animation-delay:.46s,3.5s;--t:#d6e0fa}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 28%;transition:transform .8s}
+.arch:hover img{transform:scale(1.08)}
+@keyframes rise{from{opacity:0;transform:translateY(80px) scale(.9)}}
+@keyframes bob{50%{transform:translateY(-14px)}}
 
-    header {
-      background: var(--brown);
-      color: white;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
+.ribbon{position:relative;z-index:2;background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;padding:18px 0;rotate:-1.5deg;margin:10px -3%;font:600 22px Fraunces,serif}
+.ribbon div{display:inline-block;animation:mq 40s linear infinite}
+.ribbon:hover div{animation-play-state:paused}
+.ribbon span{margin:0 26px}
+.ribbon span::before{content:"✿";display:inline-block;color:var(--sun);margin-right:26px;animation:spin 7s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
 
-    .logo {
-      color: #f1d59c;
-      font: bold 28px Georgia, serif;
-      letter-spacing: 2px;
-      text-decoration: none;
-    }
+.head{max-width:620px;margin-bottom:52px}
+.head h2{font-size:clamp(34px,4.6vw,54px);font-weight:800}
+.head p{color:var(--muted);margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.card{--rx:0deg;--ry:0deg;position:relative;background:#fff;border:1px solid var(--line);border-radius:10px 10px 30px 30px;overflow:hidden;transform:perspective(1000px) rotateX(var(--rx)) rotateY(var(--ry));transition:transform .2s ease-out,box-shadow .3s}
+.card:hover{box-shadow:0 26px 50px #171a3a26}
+.card::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(circle at var(--gx,50%) var(--gy,0%),#ffffff66,transparent 45%)}
+.card:hover::after{opacity:1}
+.ph{display:block;width:100%;border:0;padding:0;cursor:zoom-in;position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--t);border-radius:999px 999px 0 0}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;transition:transform .8s}
+.card:hover .ph img{transform:scale(1.07)}
+.tag{position:absolute;left:50%;bottom:16px;translate:-50% 0;background:#fffe;padding:3px 16px;border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap}
+.info{padding:24px 26px 28px}
+.info small{color:var(--c);font-weight:600;font-size:14px}
+.info h3{font-size:27px;margin:4px 0 10px}
+.info p{color:var(--muted);font-size:15px;line-height:1.6;min-height:96px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;padding-top:18px;border-top:1px dashed var(--line)}
+.price{font:800 30px Fraunces,serif;color:var(--c)}
+.row .btn{padding:10px 18px;font-size:15px}
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
+.js .reveal{opacity:0;translate:0 50px;transition:opacity .9s,translate .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0ms)}
+.js .reveal.in{opacity:1;translate:0 0}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-    }
+.steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:s}
+.steps li{counter-increment:s;border-top:3px solid var(--ink);padding-top:20px}
+.steps li::before{content:counter(s);display:inline-block;font:800 56px/1 Fraunces,serif;color:var(--sun);transition:transform .8s cubic-bezier(.3,1.6,.5,1) .3s}
+.js .steps li.reveal:not(.in)::before{transform:scale(0) rotate(-90deg)}
+.steps h3{font-size:24px;margin:10px 0 6px}
+.steps p{color:var(--muted);font-size:16px}
 
-    nav a:hover { color: #f1d59c; }
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.me img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 14px 14px;box-shadow:16px 16px 0 var(--sun);transition:box-shadow .6s,transform .6s}
+.me:hover img{box-shadow:6px 6px 0 var(--sun);transform:translate(5px,5px)}
+.about h2{font-size:clamp(34px,4.6vw,54px);font-weight:800;margin-bottom:18px}
+.about p{color:var(--muted);margin-bottom:14px;max-width:520px}
+.place{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:22px}
+.place address{font-style:normal;font-weight:500;border-left:3px solid var(--sun);padding-left:14px}
 
-    .hero {
-      background: #f0dfce;
-      padding: 60px 7%;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      align-items: center;
-      gap: 35px;
-    }
+.contact{padding-top:40px}
+.box{background:var(--ink);color:#fff;border-radius:200px 200px 24px 24px;padding:90px 7% 70px;text-align:center;position:relative;overflow:hidden;isolation:isolate}
+.box h2{font-size:clamp(30px,4.4vw,52px);font-weight:800}
+.handle{display:block;font:800 clamp(34px,7vw,92px)/1.1 Fraunces,serif;margin:22px 0;overflow-wrap:anywhere;background:linear-gradient(90deg,#f2a900,#ff7a59,#f2a900);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:-200% 0}}
+.box p{max-width:520px;margin:0 auto 30px;color:#cfd0e6}
 
-    .eyebrow {
-      color: var(--terracotta);
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
+footer{padding:34px 0;text-align:center;font-size:15px;color:var(--muted);border-top:1px solid var(--line)}
+.fab{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--tg);display:grid;place-items:center;box-shadow:0 10px 26px #1d8fcf80}
+.fab svg{width:28px;fill:#fff}
+.fab::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--tg);animation:ping 2.4s infinite}
+@keyframes ping{to{transform:scale(1.7);opacity:0}}
+.toast{position:fixed;left:50%;bottom:92px;translate:-50% 20px;background:var(--ink);color:#fff;padding:12px 24px;border-radius:999px;font-size:15px;opacity:0;pointer-events:none;transition:.4s;z-index:90;max-width:92%;text-align:center}
+.toast.on{opacity:1;translate:-50% 0}
+dialog{border:0;background:transparent;max-width:min(92vw,560px);max-height:94vh;margin:auto;overflow:visible}
+dialog[open]{animation:pop .45s cubic-bezier(.2,1.2,.4,1)}
+@keyframes pop{from{opacity:0;transform:scale(.8)}}
+dialog::backdrop{background:#0d0f26dd;backdrop-filter:blur(6px)}
+dialog img{max-height:88vh;width:auto;margin:auto;border-radius:18px}
+#lbx{position:absolute;top:-14px;right:-8px;width:42px;height:42px;border-radius:50%;border:0;background:#fff;font-size:24px;cursor:pointer}
 
-    h1, h2, h3 { font-family: Georgia, serif; }
-
-    .hero h1 {
-      font-size: clamp(38px, 5vw, 62px);
-      line-height: 1.15;
-      margin: 15px 0;
-    }
-
-    .hero p {
-      margin-bottom: 22px;
-      max-width: 520px;
-    }
-
-    .hero img {
-      width: 100%;
-      height: 340px;
-      object-fit: cover;
-      border-radius: 150px 150px 12px 12px;
-      border: 5px solid white;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--brown);
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 5px;
-      font-weight: bold;
-      margin: 5px 5px 5px 0;
-    }
-
-    .btn:hover { background: var(--terracotta); }
-
-    section { padding: 60px 7%; }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(30px, 4vw, 42px);
-      margin: 8px 0;
-    }
-
-    .section-heading p {
-      max-width: 600px;
-      margin: auto;
-      color: #705d51;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 25px;
-    }
-
-    .product-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 22px #59392d15;
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 250px;
-      display: block;
-      object-fit: cover;
-      background: #ead9c7;
-    }
-
-    .product-info { padding: 20px; }
-
-    .product-info h3 {
-      font-size: 23px;
-      margin-bottom: 8px;
-    }
-
-    .price {
-      color: var(--terracotta);
-      font-size: 23px;
-      font-weight: bold;
-      margin: 12px 0;
-    }
-
-    .order-btn {
-      display: block;
-      text-align: center;
-      background: #218c52;
-      color: white;
-      text-decoration: none;
-      padding: 12px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    .order-btn:hover { background: #176b3d; }
-
-    .about {
-      background: #efe0d1;
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .about img {
-      width: 100%;
-      height: 380px;
-      object-fit: cover;
-      border-radius: 10px;
-      background: #ddc5ad;
-    }
-
-    .about h2 {
-      font-size: 40px;
-      margin: 10px 0 18px;
-    }
-
-    .about p { margin-bottom: 14px; }
-
-    .location {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 12px 16px;
-      background: #fff8ef;
-      border-radius: 7px;
-    }
-
-    .contact {
-      text-align: center;
-      background: var(--brown);
-      color: white;
-    }
-
-    .contact h2 {
-      font-size: 38px;
-      margin: 10px 0;
-    }
-
-    .contact p {
-      max-width: 600px;
-      margin: 0 auto 18px;
-    }
-
-    .contact .btn {
-      background: var(--gold);
-      color: #281b13;
-    }
-
-    footer {
-      text-align: center;
-      padding: 22px;
-      background: #39241c;
-      color: #f8e8d8;
-      font-size: 14px;
-    }
-
-    @media (max-width: 800px) {
-      .hero, .about { grid-template-columns: 1fr; }
-      .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
-    @media (max-width: 520px) {
-      header {
-        justify-content: center;
-        text-align: center;
-      }
-
-      nav {
-        justify-content: center;
-        gap: 12px;
-      }
-
-      .products { grid-template-columns: 1fr; }
-      section { padding: 42px 5%; }
-      .hero { padding: 42px 5%; }
-      .hero img, .about img { height: 290px; }
-    }
-  </style>
+@media(max-width:900px){nav{display:none}.hero .wrap,.about .wrap{grid-template-columns:1fr;gap:44px}.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.about .me{max-width:380px}}
+@media(max-width:600px){section{padding:68px 0}.grid{grid-template-columns:1fr}.info p{min-height:0}.hero p{font-size:17px}.box{border-radius:120px 120px 24px 24px}header .btn{padding:10px 16px;font-size:14px}.ribbon{font-size:18px}}
+@media(prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .reveal{opacity:1;translate:none}.js .steps li.reveal:not(.in)::before{transform:none}}
+</style>
 </head>
-
 <body>
-  <header>
-    <a href="#home" class="logo">HANDMADE</a>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#products">Products</a>
-      <a href="#about">Owner</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="glow" id="glow"></div>
+<div id="bar"></div>
 
-  <main>
-    <section class="hero" id="home">
+<header>
+  <div class="wrap">
+    <a href="#home" class="logo"><i>✿</i>Clayor</a>
+    <nav aria-label="Main"><a href="#home">Home</a><a href="#products">Collection</a><a href="#order">How to order</a><a href="#about">Maker</a><a href="#contact">Contact</a></nav>
+    <a class="btn btn-tg" data-tg href="https://t.me/Clayor_Shrabani" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.88.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>Telegram</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i>
+    <div class="deco d1" data-flower="#f2a900,#c81f2d"></div>
+    <div class="wrap">
       <div>
-        <span class="eyebrow">Handmade with Love</span>
-        <h1>Beautiful Creations, Made by Hand.</h1>
-        <p>
-          Explore our unique handmade creations. Every product is made
-          with care, creativity and attention to detail.
-        </p>
-        <a href="#products" class="btn">Explore Products</a>
-      </div>
-
-      <img
-        src="CraftStudioPhotos/product-1.jpeg"
-        alt="Beautiful handmade creation"
-        onerror="this.onerror=null;this.src='https://placehold.co/700x500/f0dfce/59392d?text=Handmade+Creation';"
-      >
-    </section>
-
-    <section id="products">
-      <div class="section-heading">
-        <span class="eyebrow">Our Collection</span>
-        <h2>Handmade Products</h2>
-        <p>Choose your favourite creation and order directly through WhatsApp.</p>
-      </div>
-
-      <div class="products">
-        <article class="product-card">
-          <img
-            src="CraftStudioPhotos/product-1.jpeg"
-            alt="Handmade Product 1"
-            onerror="this.onerror=null;this.src='https://placehold.co/600x450/ead9c7/59392d?text=Product+1';"
-          >
-          <div class="product-info">
-            <h3>Handmade Product 1</h3>
-            <p>A unique handmade creation, carefully crafted with love.</p>
-            <div class="price">₹250</div>
-            <a class="order-btn"
-               href="https://wa.me/919832251317?text=Hello%2C%20I%20want%20to%20order%20Handmade%20Product%201%20for%20Rs.%20200."
-               target="_blank" rel="noopener noreferrer">
-              Order Now on WhatsApp
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img
-            src="CraftStudioPhotos/product-2.jpeg"
-            alt="Handmade Product 2"
-            onerror="this.onerror=null;this.src='https://placehold.co/600x450/ead9c7/59392d?text=Product+2';"
-          >
-          <div class="product-info">
-            <h3>Handmade Product 2</h3>
-            <p>A beautiful handmade item, made with care and creativity.</p>
-            <div class="price">₹200</div>
-            <a class="order-btn"
-               href="https://wa.me/919832251317?text=Hello%2C%20I%20want%20to%20order%20Handmade%20Product%202%20for%20Rs.%20200."
-               target="_blank" rel="noopener noreferrer">
-              Order Now on WhatsApp
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img
-            src="CraftStudioPhotos/product-3.jpeg"
-            alt="Handmade Product 3"
-            onerror="this.onerror=null;this.src='https://placehold.co/600x450/ead9c7/59392d?text=Product+3';"
-          >
-          <div class="product-info">
-            <h3>Handmade Product 3</h3>
-            <p>A special handmade creation, perfect for gifting.</p>
-            <div class="price">₹300</div>
-            <a class="order-btn"
-               href="https://wa.me/919832251317?text=Hello%2C%20I%20want%20to%20order%20Handmade%20Product%203%20for%20Rs.%20200."
-               target="_blank" rel="noopener noreferrer">
-              Order Now on WhatsApp
-            </a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <img
-        src="CraftStudioPhotos/owner.jpeg"
-        alt="Handmade business owner"
-        onerror="this.onerror=null;this.src='https://placehold.co/600x700/ead9c7/59392d?text=Owner+Photo';"
-      >
-
-      <div>
-        <span class="eyebrow">Meet the Creator</span>
-        <h2>Meet Our Owner</h2>
-        <p>
-          Behind every handmade product is a person who puts time,
-          skill and creativity into every detail.
-        </p>
-        <p>
-          Our owner creates each product with care and a passion
-          for handmade craftsmanship.
-        </p>
-
-        <div class="location">
-          <strong>Our Location</strong><br>
-          Chakdaha, Nadia,<br>
-          West Bengal 741222
+        <h1 id="h1">Bengal’s flowers, shaped in clay.</h1>
+        <p>Handmade clay jewellery sets by Shrabani Paul in Chakdaha. Each design is a necklace with matching earrings, sculpted and coloured by hand.</p>
+        <div class="cta">
+          <a class="btn btn-dark" href="#products">Shop the collection</a>
+          <a class="btn btn-line" data-tg href="https://t.me/Clayor_Shrabani" target="_blank" rel="noopener noreferrer">Message on Telegram</a>
         </div>
-
-        <p style="margin-top:18px;">
-          <a class="btn"
-             href="https://www.google.com/maps/search/?api=1&query=Chakdaha%2C+Nadia%2C+West+Bengal+741222"
-             target="_blank" rel="noopener noreferrer">
-            View Location on Maps
-          </a>
-        </p>
       </div>
-    </section>
+      <div class="arches">
+        <button class="arch" data-zoom="CraftStudioPhotos/product-1.jpeg" aria-label="View Surjomukhi Sunburst Set"><img src="CraftStudioPhotos/product-1.jpeg" alt="Sunflower clay necklace and earrings on a green saree"></button>
+        <button class="arch" data-zoom="CraftStudioPhotos/product-2.jpeg" aria-label="View Joba Rani Blossom Set"><img src="CraftStudioPhotos/product-2.jpeg" alt="Red blossom clay necklace and earrings on a white and red saree"></button>
+        <button class="arch" data-zoom="CraftStudioPhotos/product-3.jpeg" aria-label="View Neel Mayur Peacock Set"><img src="CraftStudioPhotos/product-3.jpeg" alt="Blue peacock clay necklace and earrings on a blue and white saree"></button>
+      </div>
+    </div>
+  </section>
 
-    <section class="contact" id="contact">
-      <span class="eyebrow" style="color:#f1d59c;">We'd Love to Hear from You</span>
-      <h2>Ready to Order?</h2>
-      <p>
-        Choose a handmade product and tap its Order Now button.
-        WhatsApp will open with the product name and price in a
-        pre-filled message. Review and send it there.
-      </p>
+  <div class="ribbon" aria-hidden="true"><div id="mq"></div></div>
 
-      <a class="btn"
-         href="https://wa.me/919832251317?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20handmade%20products."
-         target="_blank" rel="noopener noreferrer">
-        Chat on WhatsApp
-      </a>
+  <section id="products">
+    <div class="wrap">
+      <div class="head reveal">
+        <h2>The Clayor collection</h2>
+        <p>Three signature sets. Tap a photo to see every detail, then order in one tap.</p>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
 
-      <p style="margin-top:15px;">
-        Location: Chakdaha, Nadia, West Bengal 741222
-      </p>
-    </section>
-  </main>
+  <section id="order">
+    <div class="wrap">
+      <div class="head reveal"><h2>How to order</h2></div>
+      <ol class="steps">
+        <li class="reveal"><h3>Pick your set</h3><p>Browse the collection and tap any photo to view it larger.</p></li>
+        <li class="reveal" style="--d:150ms"><h3>Tap Order on Telegram</h3><p>Your order message is copied and Telegram opens in a new tab.</p></li>
+        <li class="reveal" style="--d:300ms"><h3>Paste and send</h3><p>Paste the message into the chat with Shrabani to confirm your order.</p></li>
+      </ol>
+    </div>
+  </section>
 
-  <footer>
-    <p>© <span id="year"></span> Handmade Collection. All rights reserved.</p>
-    <p>Crafted with care, shared with love.</p>
-  </footer>
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="me reveal"><img src="CraftStudioPhotos/owner.jpeg" alt="Shrabani Paul, maker and owner of Clayor" loading="lazy"></div>
+      <div class="reveal" style="--d:200ms">
+        <h2>Made by Shrabani Paul</h2>
+        <p>Every Clayor piece starts as a small lump of clay. Shrabani shapes each petal, leaf and bead by hand, so your set is made with time, skill and care.</p>
+        <p>Have a favourite colour or an occasion in mind? Ask on Telegram.</p>
+        <div class="place">
+          <address>Chakdaha, Nadia,<br>West Bengal 741222</address>
+          <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Chakdaha%2C+Nadia%2C+West+Bengal+741222" target="_blank" rel="noopener noreferrer">View on Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="box reveal">
+        <div class="deco d2" data-flower="#1f3fa6,#1d6b4c"></div>
+        <h2>Ready to order?</h2>
+        <a class="handle" data-tg href="https://t.me/Clayor_Shrabani" target="_blank" rel="noopener noreferrer">@Clayor_Shrabani</a>
+        <p>Send a message on Telegram with the name of the set you want.</p>
+        <a class="btn btn-tg" data-tg href="https://t.me/Clayor_Shrabani" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.88.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>Open Telegram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="yr"></span> Clayor by Shrabani Paul. All rights reserved.</p>
+  <p lang="bn">মাটির গয়না, হাতে তৈরি, চাকদহ থেকে</p>
+</footer>
+
+<a class="fab" data-tg href="https://t.me/Clayor_Shrabani" target="_blank" rel="noopener noreferrer" aria-label="Chat on Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.88.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<dialog id="lb" aria-label="Product photo"><img id="lbimg" alt=""><button id="lbx" aria-label="Close">×</button></dialog>
+
+<script>
+/* ===== EDIT HERE: Telegram link and products ===== */
+const TG = "https://t.me/Clayor_Shrabani";
+const PRODUCTS = [
+  {id:1, name:"Surjomukhi Sunburst Set", sub:"No. 01, Sunflower collection", badge:"Necklace + earrings", price:250,
+   img:"CraftStudioPhotos/product-1.jpeg", c:"#a86300", t:"#fdeab8",
+   desc:"A hand-sculpted sunflower pendant on a braided forest-green cord, finished with bright beads, hanging charms and matching star-petal studs."},
+  {id:2, name:"Joba Rani Blossom Set", sub:"No. 02, Hibiscus collection", badge:"Necklace + earrings", price:200,
+   img:"CraftStudioPhotos/product-2.jpeg", c:"#c81f2d", t:"#fbd3d6",
+   desc:"A crimson blossom on a golden tile, strung on a saffron braided cord with pink and blue beads, plus matching five-petal studs."},
+  {id:3, name:"Neel Mayur Peacock Set", sub:"No. 03, Peacock collection", badge:"Necklace + earrings", price:300,
+   img:"CraftStudioPhotos/product-3.jpeg", c:"#1f3fa6", t:"#d6e0fa",
+   desc:"A peacock-inspired royal-blue pendant with fresh green leaves on a white and blue beaded cord, with matching teardrop earrings."}
+];
+/* ================================================= */
+const $ = s => document.querySelector(s);
+const FINE = matchMedia('(hover:hover)').matches, CALM = matchMedia('(prefers-reduced-motion:reduce)').matches;
+const ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.88.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>';
+const FALLBACK = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="600" height="750"><rect width="100%" height="100%" fill="#f1e8d8"/><text x="50%" y="50%" fill="#5d5f7a" font-family="Georgia" font-size="28" text-anchor="middle">Photo coming soon</text></svg>');
+
+document.addEventListener('error', e => {
+  const i = e.target;
+  if (i.tagName === 'IMG' && !i.dataset.fb) { i.dataset.fb = 1; i.src = FALLBACK; }
+}, true);
+document.querySelectorAll('[data-tg]').forEach(a => a.href = TG);
+
+/* headline: words rise one by one */
+const h = $('#h1');
+h.innerHTML = h.textContent.split(' ').map((w, i) => `<span class="w" style="--i:${i}">${w}</span>`).join(' ');
+
+/* scrolling ribbon */
+const items = [...PRODUCTS.map(p => p.name), 'মাটির গয়না', 'Handmade in Chakdaha', 'Clay jewellery'];
+$('#mq').innerHTML = (items.map(t => `<span>${t}</span>`).join('')).repeat(2);
+
+/* spinning clay flowers */
+document.querySelectorAll('[data-flower]').forEach(el => {
+  const [a, b] = el.dataset.flower.split(',');
+  el.innerHTML = '<svg viewBox="-50 -50 100 100" aria-hidden="true">' +
+    Array.from({length: 12}, (_, i) => `<ellipse cx="0" cy="-26" rx="8" ry="22" fill="${i % 2 ? a : b}" transform="rotate(${i * 30})"/>`).join('') +
+    '<circle r="11" fill="#171a3a"/></svg>';
+});
+
+/* product cards */
+$('#grid').innerHTML = PRODUCTS.map((p, i) => `
+  <div class="reveal" style="--d:${i * 150}ms">
+    <article class="card tilt" style="--c:${p.c};--t:${p.t}">
+      <button class="ph" data-zoom="${p.img}" aria-label="View ${p.name} larger">
+        <img src="${p.img}" alt="${p.name}, handmade clay jewellery set" loading="lazy">
+        <span class="tag">${p.badge}</span>
+      </button>
+      <div class="info">
+        <small>${p.sub}</small>
+        <h3>${p.name}</h3>
+        <p>${p.desc}</p>
+        <div class="row">
+          <div class="price">₹${p.price}</div>
+          <a class="btn btn-tg" data-order="${i}" href="${TG}" target="_blank" rel="noopener noreferrer">${ICON}Order on Telegram</a>
+        </div>
+      </div>
+    </article>
+  </div>`).join('');
+
+/* toast, order copy, lightbox */
+let timer;
+function toast(msg) {
+  const t = $('#toast'); t.textContent = msg; t.classList.add('on');
+  clearTimeout(timer); timer = setTimeout(() => t.classList.remove('on'), 4200);
+}
+document.addEventListener('click', e => {
+  const o = e.target.closest('[data-order]');
+  if (o) {
+    const p = PRODUCTS[o.dataset.order];
+    const msg = `Hello Clayor! I want to order "${p.name}" (No. 0${p.id}) for ₹${p.price}.`;
+    const fail = () => toast('Telegram is opening. Please type the set name in your message.');
+    try { navigator.clipboard.writeText(msg).then(() => toast('Order message copied. Paste it into Telegram.'), fail); } catch (_) { fail(); }
+    return;
+  }
+  const z = e.target.closest('[data-zoom]');
+  if (z) { $('#lbimg').src = z.dataset.zoom; $('#lb').showModal(); return; }
+  if (e.target.id === 'lb' || e.target.id === 'lbx') $('#lb').close();
+});
+
+/* scroll reveal + progress bar */
+const io = 'IntersectionObserver' in window
+  ? new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), {threshold: .15})
+  : null;
+document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+const bar = $('#bar');
+addEventListener('scroll', () => {
+  bar.style.transform = `scaleX(${scrollY / Math.max(1, document.documentElement.scrollHeight - innerHeight)})`;
+}, {passive: true});
+
+/* falling clay petals (canvas) */
+if (!CALM) (() => {
+  const c = $('#fx'), x = c.getContext('2d'), cols = ['#f2a900', '#c81f2d', '#1f3fa6', '#1d6b4c', '#e86f8f'];
+  let W, H; const m = {x: -999, y: -999}, P = [];
+  const size = () => { W = c.width = innerWidth; H = c.height = innerHeight; };
+  size(); addEventListener('resize', size);
+  addEventListener('pointermove', e => { m.x = e.clientX; m.y = e.clientY; });
+  for (let i = 0; i < (innerWidth < 700 ? 14 : 32); i++)
+    P.push({x: Math.random() * W, y: Math.random() * H, r: 6 + Math.random() * 10, s: .3 + Math.random() * .7,
+            a: Math.random() * 6.28, v: (Math.random() - .5) * .03, c: cols[i % 5], w: Math.random() * 6.28});
+  (function tick() {
+    x.clearRect(0, 0, W, H);
+    for (const p of P) {
+      p.w += .01; p.y += p.s; p.x += Math.sin(p.w) * .6; p.a += p.v;
+      const dx = p.x - m.x, dy = p.y - m.y, d = Math.hypot(dx, dy);
+      if (d < 110 && d > .1) { p.x += dx / d * 2.2; p.y += dy / d * 2.2; }
+      if (p.y > H + 20) { p.y = -20; p.x = Math.random() * W; }
+      x.save(); x.translate(p.x, p.y); x.rotate(p.a); x.fillStyle = p.c; x.globalAlpha = .5;
+      x.beginPath(); x.ellipse(0, 0, p.r, p.r * .5, 0, 0, 6.283); x.fill(); x.restore();
+    }
+    requestAnimationFrame(tick);
+  })();
+})();
+
+/* desktop-only motion: cursor glow, hero parallax, card tilt + shine, magnetic buttons */
+if (FINE && !CALM) {
+  const g = $('#glow'); g.style.display = 'block';
+  addEventListener('pointermove', e => { g.style.transform = `translate(${e.clientX}px,${e.clientY}px)`; });
+  const hero = $('#home'), ar = $('.arches');
+  hero.addEventListener('pointermove', e => {
+    const r = hero.getBoundingClientRect();
+    ar.style.setProperty('--px', ((e.clientX - r.left) / r.width - .5) * -26 + 'px');
+    ar.style.setProperty('--py', ((e.clientY - r.top) / r.height - .5) * -16 + 'px');
+  });
+  document.querySelectorAll('.tilt').forEach(c => {
+    c.addEventListener('pointermove', e => {
+      const r = c.getBoundingClientRect(), px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+      c.style.setProperty('--ry', (px - .5) * 8 + 'deg'); c.style.setProperty('--rx', -(py - .5) * 8 + 'deg');
+      c.style.setProperty('--gx', px * 100 + '%'); c.style.setProperty('--gy', py * 100 + '%');
+    });
+    c.addEventListener('pointerleave', () => { c.style.setProperty('--rx', '0deg'); c.style.setProperty('--ry', '0deg'); });
+  });
+  document.querySelectorAll('.btn').forEach(b => {
+    b.addEventListener('pointermove', e => {
+      const r = b.getBoundingClientRect();
+      b.style.setProperty('--mx', (e.clientX - r.left - r.width / 2) * .2 + 'px');
+      b.style.setProperty('--my', (e.clientY - r.top - r.height / 2) * .3 + 'px');
+    });
+    b.addEventListener('pointerleave', () => { b.style.setProperty('--mx', '0px'); b.style.setProperty('--my', '0px'); });
+  });
+}
+$('#yr').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
