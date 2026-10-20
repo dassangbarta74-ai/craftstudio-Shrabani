@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Handmade Collection | Crafted with Love</title>
-
-  <meta name="description" content="Discover unique handmade products, crafted with care in Chakdaha, Nadia, West Bengal.">
+  <meta name="description" content="Discover handmade products crafted with care in Chakdaha, Nadia, West Bengal.">
 
   <style>
     :root {
@@ -23,9 +21,7 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: Arial, sans-serif;
@@ -49,6 +45,7 @@
       color: #f1d59c;
       font: bold 28px Georgia, serif;
       letter-spacing: 2px;
+      text-decoration: none;
     }
 
     nav {
@@ -62,9 +59,7 @@
       text-decoration: none;
     }
 
-    nav a:hover {
-      color: #f1d59c;
-    }
+    nav a:hover { color: #f1d59c; }
 
     .hero {
       background: #f0dfce;
@@ -83,9 +78,7 @@
       text-transform: uppercase;
     }
 
-    h1, h2, h3 {
-      font-family: Georgia, serif;
-    }
+    h1, h2, h3 { font-family: Georgia, serif; }
 
     .hero h1 {
       font-size: clamp(38px, 5vw, 62px);
@@ -117,13 +110,9 @@
       margin: 5px 5px 5px 0;
     }
 
-    .btn:hover {
-      background: var(--terracotta);
-    }
+    .btn:hover { background: var(--terracotta); }
 
-    section {
-      padding: 60px 7%;
-    }
+    section { padding: 60px 7%; }
 
     .section-heading {
       text-align: center;
@@ -162,9 +151,7 @@
       background: #ead9c7;
     }
 
-    .product-info {
-      padding: 20px;
-    }
+    .product-info { padding: 20px; }
 
     .product-info h3 {
       font-size: 23px;
@@ -189,9 +176,7 @@
       font-weight: bold;
     }
 
-    .order-btn:hover {
-      background: #176b3d;
-    }
+    .order-btn:hover { background: #176b3d; }
 
     .about {
       background: #efe0d1;
@@ -214,9 +199,7 @@
       margin: 10px 0 18px;
     }
 
-    .about p {
-      margin-bottom: 14px;
-    }
+    .about p { margin-bottom: 14px; }
 
     .location {
       display: inline-block;
@@ -256,13 +239,8 @@
     }
 
     @media (max-width: 800px) {
-      .hero, .about {
-        grid-template-columns: 1fr;
-      }
-
-      .products {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      .hero, .about { grid-template-columns: 1fr; }
+      .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 520px) {
@@ -276,30 +254,17 @@
         gap: 12px;
       }
 
-      .products {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 42px 5%;
-      }
-
-      .hero {
-        padding: 42px 5%;
-      }
-
-      .hero img, .about img {
-        height: 290px;
-      }
+      .products { grid-template-columns: 1fr; }
+      section { padding: 42px 5%; }
+      .hero { padding: 42px 5%; }
+      .hero img, .about img { height: 290px; }
     }
   </style>
 </head>
 
 <body>
-
   <header>
     <a href="#home" class="logo">HANDMADE</a>
-
     <nav>
       <a href="#home">Home</a>
       <a href="#products">Products</a>
@@ -309,23 +274,22 @@
   </header>
 
   <main>
-
     <section class="hero" id="home">
       <div>
         <span class="eyebrow">Handmade with Love</span>
         <h1>Beautiful Creations, Made by Hand.</h1>
-
         <p>
           Explore our unique handmade creations. Every product is made
           with care, creativity and attention to detail.
         </p>
-
         <a href="#products" class="btn">Explore Products</a>
       </div>
 
-      <!-- Replace hero.jpg with your product photo if available -->
-      <img src="product-1.jpg"
-           alt="Beautiful handmade creation">
+      <img
+        src="CraftStudioPhotos/product-1.jpeg"
+        alt="Beautiful handmade creation"
+        onerror="this.onerror=null;this.src='https://placehold.co/700x500/f0dfce/59392d?text=Handmade+Creation';"
+      >
     </section>
 
     <section id="products">
@@ -336,15 +300,16 @@
       </div>
 
       <div class="products">
-
         <article class="product-card">
-          <img src="product-1.jpg" alt="Handmade Product 1">
-
+          <img
+            src="CraftStudioPhotos/product-1.jpeg"
+            alt="Handmade Product 1"
+            onerror="this.onerror=null;this.src='https://placehold.co/600x450/ead9c7/59392d?text=Product+1';"
+          >
           <div class="product-info">
             <h3>Handmade Product 1</h3>
             <p>A unique handmade creation, carefully crafted with love.</p>
             <div class="price">₹200</div>
-
             <a class="order-btn"
                href="https://wa.me/919832251317?text=Hello%2C%20I%20want%20to%20order%20Handmade%20Product%201%20for%20Rs.%20200."
                target="_blank" rel="noopener noreferrer">
@@ -354,13 +319,15 @@
         </article>
 
         <article class="product-card">
-          <img src="product-2.jpg" alt="Handmade Product 2">
-
+          <img
+            src="CraftStudioPhotos/product-2.jpeg"
+            alt="Handmade Product 2"
+            onerror="this.onerror=null;this.src='https://placehold.co/600x450/ead9c7/59392d?text=Product+2';"
+          >
           <div class="product-info">
             <h3>Handmade Product 2</h3>
             <p>A beautiful handmade item, made with care and creativity.</p>
             <div class="price">₹200</div>
-
             <a class="order-btn"
                href="https://wa.me/919832251317?text=Hello%2C%20I%20want%20to%20order%20Handmade%20Product%202%20for%20Rs.%20200."
                target="_blank" rel="noopener noreferrer">
@@ -370,13 +337,15 @@
         </article>
 
         <article class="product-card">
-          <img src="product-3.jpg" alt="Handmade Product 3">
-
+          <img
+            src="CraftStudioPhotos/product-3.jpeg"
+            alt="Handmade Product 3"
+            onerror="this.onerror=null;this.src='https://placehold.co/600x450/ead9c7/59392d?text=Product+3';"
+          >
           <div class="product-info">
             <h3>Handmade Product 3</h3>
             <p>A special handmade creation, perfect for gifting.</p>
             <div class="price">₹200</div>
-
             <a class="order-btn"
                href="https://wa.me/919832251317?text=Hello%2C%20I%20want%20to%20order%20Handmade%20Product%203%20for%20Rs.%20200."
                target="_blank" rel="noopener noreferrer">
@@ -384,23 +353,23 @@
             </a>
           </div>
         </article>
-
       </div>
     </section>
 
     <section class="about" id="about">
-      <!-- Upload the owner's actual photo as owner.jpg -->
-      <img src="owner.jpg" alt="Handmade business owner">
+      <img
+        src="CraftStudioPhotos/owner.jpeg"
+        alt="Handmade business owner"
+        onerror="this.onerror=null;this.src='https://placehold.co/600x700/ead9c7/59392d?text=Owner+Photo';"
+      >
 
       <div>
         <span class="eyebrow">Meet the Creator</span>
         <h2>Meet Our Owner</h2>
-
         <p>
           Behind every handmade product is a person who puts time,
           skill and creativity into every detail.
         </p>
-
         <p>
           Our owner creates each product with care and a passion
           for handmade craftsmanship.
@@ -412,7 +381,7 @@
           West Bengal 741222
         </div>
 
-        <p style="margin-top: 18px;">
+        <p style="margin-top:18px;">
           <a class="btn"
              href="https://www.google.com/maps/search/?api=1&query=Chakdaha%2C+Nadia%2C+West+Bengal+741222"
              target="_blank" rel="noopener noreferrer">
@@ -425,11 +394,10 @@
     <section class="contact" id="contact">
       <span class="eyebrow" style="color:#f1d59c;">We'd Love to Hear from You</span>
       <h2>Ready to Order?</h2>
-
       <p>
-        Choose any handmade product and tap its Order Now button.
-        WhatsApp will open with a message containing the product name
-        and price. You can review and send the message there.
+        Choose a handmade product and tap its Order Now button.
+        WhatsApp will open with the product name and price in a
+        pre-filled message. Review and send it there.
       </p>
 
       <a class="btn"
@@ -442,7 +410,6 @@
         Location: Chakdaha, Nadia, West Bengal 741222
       </p>
     </section>
-
   </main>
 
   <footer>
@@ -451,9 +418,7 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
